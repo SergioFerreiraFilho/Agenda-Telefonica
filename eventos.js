@@ -94,7 +94,11 @@ async function editarContato() {
         }
     })
     .then(res => res.json())
-    .then(() => { alert('Editado com Sucesso'), atualizarLista() })
+    .then(() => { 
+        alert('Editado com Sucesso')
+        atualizarLista() 
+        bsOffcanvas.hide()
+    })
 
     
 }
