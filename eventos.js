@@ -10,6 +10,7 @@ function atualizarLista () {
         lista.forEach(function(cadaItem){
             tabela_contatos.innerHTML += `
             <tr>
+                <td> <input data-check="acao" type="checkbox"></td>
                 <td>${cadaItem.id}</td>
                 <td>${cadaItem.nome}</td>
                 <td>${cadaItem.telefone}</td>
@@ -94,14 +95,27 @@ async function editarContato() {
         }
     })
     .then(res => res.json())
-    .then(() => { 
-        alert('Editado com Sucesso')
-        atualizarLista() 
-        bsOffcanvas.hide()
-    })
+    .then(() => { alert('Editado com Sucesso'), atualizarLista() })
 
     
 }
+
+function marcarTodos () {
+    let todos = document.querySelectorAll('[data-check="acao"]')
+
+
+    if (marcadortodos.checked === true) {
+        todos.forEach((cadaCheck) => {
+            cadaCheck.checked = true
+        })
+    }else { 
+        todos.forEach((cadaCheck) => {
+            cadaCheck.checked = false
+        })
+
+    }
+}
+
 
 
 
