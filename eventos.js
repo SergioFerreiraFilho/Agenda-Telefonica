@@ -10,7 +10,6 @@ function atualizarLista () {
         lista.forEach(function(cadaItem){
             tabela_contatos.innerHTML += `
             <tr>
-                <td> <input data-check="acao" type="checkbox"></td>
                 <td>${cadaItem.id}</td>
                 <td>${cadaItem.nome}</td>
                 <td>${cadaItem.telefone}</td>
@@ -48,6 +47,7 @@ function adicionarContato() {
     })
     .then(resposta => resposta.json())
     .then(reposta => atualizarLista())
+    alert('Adicionado com Sucesso')
 
     let x = document.querySelector('[data-bs-dismiss="offcanvas"]')
 
