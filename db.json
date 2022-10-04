@@ -3,7 +3,7 @@
     {
       "nome": "Eu",
       "telefone": "12345678",
-      "cidade": "Fortaleza",
+      "cidade": "Aquiraz",
       "id": 1
     },
     {
@@ -29,12 +29,6 @@
       "telefone": "12345678",
       "cidade": "Fortaleza",
       "id": 5
-    },
-    {
-      "nome": "Girlane",
-      "telefone": "987654321",
-      "cidade": "Aquiraz",
-      "id": 6
     }
   ]
 }
